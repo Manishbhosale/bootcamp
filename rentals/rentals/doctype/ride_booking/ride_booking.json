@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-19 15:40:08.227654",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sjph",
+  "amended_from",
+  "order",
+  "column_break_ydq0",
+  "vehicle",
+  "vehiclee",
+  "column_break_yizp",
+  "ride_booking_details",
+  "rate",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sjph",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Link",
+   "label": "Order",
+   "options": "Ride Order"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "ride_booking_details",
+   "fieldtype": "Table",
+   "label": "Ride Booking details",
+   "options": "Ride booking item"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total amount"
+  },
+  {
+   "fieldname": "column_break_yizp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ydq0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "order.vehicle",
+   "fieldname": "vehiclee",
+   "fieldtype": "Link",
+   "label": "Vehiclee",
+   "options": "Vehicle"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-21 17:30:08.005225",
+ "modified_by": "Administrator",
+ "module": "rentals",
+ "name": "Ride booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
